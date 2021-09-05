@@ -21,7 +21,7 @@ class Shape:
         points = self.points # gets list of points to draw
         # Put the pen up, so the turtle isn't drawing on the canvas and move to first point
         self.my_turtle.penup()
-        self.my_turtle.goto(points[0])
+        self.my_turtle.goto(points[0].x,points[0].y)
 
         # Sets up colour for shape fill colour and puts pen down
         self.my_turtle.color(self.colour)
@@ -30,10 +30,10 @@ class Shape:
 
         # Moves around to different points to draw the shape
         for point in points:
-            self.my_turtle.goto(point)
+            self.my_turtle.goto(point.x,point.y)
         
         # Moves to first point, to close the shape
-        self.my_turtle.goto(points[0])
+        self.my_turtle.goto(points[0].x,points[0].y)
         self.my_turtle.end_fill()
 
 
